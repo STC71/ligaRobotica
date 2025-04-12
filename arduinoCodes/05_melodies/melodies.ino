@@ -1,9 +1,5 @@
-// -------------------------------------------------
-// Copyright (c) 2022 HiBit <https://www.hibit.dev>
-// -------------------------------------------------
-
 /*************************************************
- * Public Constants
+ * MUSIC NOTES
  *************************************************/
  
  #define NOTE_B0	31
@@ -95,59 +91,253 @@
  #define NOTE_CS8 4435
  #define NOTE_D8	4699
  #define NOTE_DS8 4978
+ #define REST 0
 
- #define BUZZER_PIN 10
- #define BOTTON4_PIN 9
+ #define BUZZER_PIN 2
+ #define BOTTON1_PIN 13
+ #define BOTTON2_PIN 12
+ #define BOTTON3_PIN 11
+ #define BOTTON4_PIN 10
+ #define BOTTON5_PIN 9
+ #define T 1000
 
-int melody[] = {
-	NOTE_G4, NOTE_C4, NOTE_DS4, NOTE_F4, NOTE_G4, NOTE_C4, NOTE_DS4, NOTE_F4,
-	NOTE_G4, NOTE_C4, NOTE_DS4, NOTE_F4, NOTE_G4, NOTE_C4, NOTE_DS4, NOTE_F4,
-	NOTE_G4, NOTE_C4, NOTE_E4, NOTE_F4, NOTE_G4, NOTE_C4, NOTE_E4, NOTE_F4,
-	NOTE_G4, NOTE_C4, NOTE_E4, NOTE_F4, NOTE_G4, NOTE_C4, NOTE_E4, NOTE_F4,
-	NOTE_G4, NOTE_C4,
-	
-	NOTE_DS4, NOTE_F4, NOTE_G4, NOTE_C4, NOTE_DS4, NOTE_F4,
-	NOTE_D4,
-	NOTE_F4, NOTE_AS3,
-	NOTE_DS4, NOTE_D4, NOTE_F4, NOTE_AS3,
-	NOTE_DS4, NOTE_D4, NOTE_C4,
-	
-	NOTE_G4, NOTE_C4,
-	
-	NOTE_DS4, NOTE_F4, NOTE_G4, NOTE_C4, NOTE_DS4, NOTE_F4,
-	NOTE_D4,
-	NOTE_F4, NOTE_AS3,
-	NOTE_DS4, NOTE_D4, NOTE_F4, NOTE_AS3,
-	NOTE_DS4, NOTE_D4, NOTE_C4,
-	NOTE_G4, NOTE_C4,
-	NOTE_DS4, NOTE_F4, NOTE_G4,	NOTE_C4, NOTE_DS4, NOTE_F4,
-	
-	NOTE_D4,
-	NOTE_F4, NOTE_AS3,
-	NOTE_D4, NOTE_DS4, NOTE_D4, NOTE_AS3,
-	NOTE_C4,
-	NOTE_C5,
-	NOTE_AS4,
-	NOTE_C4,
-	NOTE_G4,
-	NOTE_DS4,
-	NOTE_DS4, NOTE_F4,
-	NOTE_G4,
-	
-	NOTE_C5,
-	NOTE_AS4,
-	NOTE_C4,
-	NOTE_G4,
-	NOTE_DS4,
-	NOTE_DS4, NOTE_D4,
-	NOTE_C5, NOTE_G4, NOTE_GS4, NOTE_AS4, NOTE_C5, NOTE_G4, NOTE_GS4, NOTE_AS4,
-	NOTE_C5, NOTE_G4, NOTE_GS4, NOTE_AS4, NOTE_C5, NOTE_G4, NOTE_GS4, NOTE_AS4,
-	
-	NOTE_GS5, NOTE_AS5, NOTE_C6, NOTE_G5, NOTE_GS5, NOTE_AS5,
-	NOTE_C6, NOTE_G5, NOTE_GS5, NOTE_AS5, NOTE_C6, NOTE_G5, NOTE_GS5, NOTE_AS5
+// 1 TETRIS
+
+int melody1[] = {
+  NOTE_E5, NOTE_B4, NOTE_C5, NOTE_D5, NOTE_C5, NOTE_B4,
+  NOTE_A4, NOTE_A4, NOTE_C5, NOTE_E5, NOTE_D5, NOTE_C5,
+  NOTE_B4, NOTE_C5, NOTE_D5, NOTE_E5,
+  NOTE_C5, NOTE_A4, NOTE_A4, NOTE_A4, NOTE_B4, NOTE_C5,
+  
+  NOTE_D5, NOTE_F5, NOTE_A5, NOTE_G5, NOTE_F5,
+  NOTE_E5, NOTE_C5, NOTE_E5, NOTE_D5, NOTE_C5,
+  NOTE_B4, NOTE_B4, NOTE_C5, NOTE_D5, NOTE_E5,
+  NOTE_C5, NOTE_A4, NOTE_A4, REST, 
+  
+  NOTE_E5, NOTE_B4, NOTE_C5, NOTE_D5, NOTE_C5, NOTE_B4,
+  NOTE_A4, NOTE_A4, NOTE_C5, NOTE_E5, NOTE_D5, NOTE_C5,
+  NOTE_B4, NOTE_C5, NOTE_D5, NOTE_E5,
+  NOTE_C5, NOTE_A4, NOTE_A4, NOTE_A4, NOTE_B4, NOTE_C5,
+  
+  NOTE_D5, NOTE_F5, NOTE_A5, NOTE_G5, NOTE_F5,
+  NOTE_E5, NOTE_C5, NOTE_E5, NOTE_D5, NOTE_C5,
+  NOTE_B4, NOTE_B4, NOTE_C5, NOTE_D5, NOTE_E5,
+  NOTE_C5, NOTE_A4, NOTE_A4, REST, 
+  
+  NOTE_E5, NOTE_C5,
+  NOTE_D5, NOTE_B4,
+  NOTE_C5, NOTE_A4,
+  NOTE_GS4, NOTE_B4, REST, 
+  NOTE_E5, NOTE_C5,
+  NOTE_D5, NOTE_B4,
+  NOTE_C5, NOTE_E5, NOTE_A5,
+  NOTE_GS5
 };
 
-int durations[] = {
+int durations1[] = {
+  4, 8, 8, 4, 8, 8,
+  4, 8, 8, 4, 8, 8,
+  4, 8, 4, 4,
+  4, 4, 8, 4, 8, 8,
+  
+  4, 8, 4, 8, 8,
+  4, 8, 4, 8, 8,
+  4, 8, 8, 4, 4,
+  4, 4, 4, 4,
+  
+  4, 8, 8, 4, 8, 8,
+  4, 8, 8, 4, 8, 8,
+  4, 8, 4, 4,
+  4, 4, 8, 4, 8, 8,
+  
+  4, 8, 4, 8, 8,
+  4, 8, 4, 8, 8,
+  4, 8, 8, 4, 4,
+  4, 4, 4, 4,
+  
+  2, 2,
+  2, 2,
+  2, 2,
+  2, 4, 8, 
+  2, 2,
+  2, 2,
+  4, 4, 2,
+  2
+};
+
+// END TETRIS
+
+// 2 THE GODFATHER
+int melody2[] = {
+  REST, REST, REST, REST, NOTE_E4, NOTE_A4, NOTE_C5,
+  
+  NOTE_B4, NOTE_A4, NOTE_C5, NOTE_A4, NOTE_B4, NOTE_A4, NOTE_F4, NOTE_G4,
+  NOTE_E4, NOTE_E4, NOTE_A4, NOTE_C5,
+  NOTE_B4, NOTE_A4, NOTE_C5, NOTE_A4, NOTE_C5, NOTE_A4, NOTE_E4, NOTE_DS4,
+
+  NOTE_D4, NOTE_D4, NOTE_F4, NOTE_GS4,
+  NOTE_B4, NOTE_D4, NOTE_F4, NOTE_GS4,
+  NOTE_A4, NOTE_C4, NOTE_C4, NOTE_G4,
+  NOTE_F4, NOTE_E4, NOTE_G4, NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_GS4,
+
+  NOTE_A4, REST, NOTE_A4, NOTE_A4, NOTE_GS4,
+  NOTE_G4, NOTE_B4, NOTE_A4, NOTE_F4,
+  NOTE_E4, NOTE_E4, NOTE_G4, NOTE_E4,
+  NOTE_D4, NOTE_D4, NOTE_D4, NOTE_F4, NOTE_DS4,
+
+  NOTE_E4, REST, NOTE_E4, NOTE_A4, NOTE_C5,
+
+  //repeat
+  NOTE_B4, NOTE_A4, NOTE_C5, NOTE_A4, NOTE_B4, NOTE_A4, NOTE_F4, NOTE_G4,
+  NOTE_E4, NOTE_E4, NOTE_A4, NOTE_C5,
+  NOTE_B4, NOTE_A4, NOTE_C5, NOTE_A4, NOTE_C5, NOTE_A4, NOTE_E4, NOTE_DS4,
+
+  NOTE_D4, NOTE_D4, NOTE_F4, NOTE_GS4,
+  NOTE_B4, NOTE_D4, NOTE_F4, NOTE_GS4,
+  NOTE_A4, NOTE_C4, NOTE_C4, NOTE_G4,
+  NOTE_F4, NOTE_E4, NOTE_G4, NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_GS4,
+
+  NOTE_A4, REST, NOTE_A4, NOTE_A4, NOTE_GS4,
+  NOTE_G4, NOTE_B4, NOTE_A4, NOTE_F4,
+  NOTE_E4, NOTE_E4, NOTE_G4, NOTE_E4,
+  NOTE_D4, NOTE_D4, NOTE_D4, NOTE_F4, NOTE_DS4,
+
+  NOTE_E4
+};
+
+int durations2[] = {
+  4, 8, 8, 8, 8, 8, 8,
+  8, 8, 8, 8, 8, 8, 8, 8,
+  2, 8, 8, 8,
+  8, 8, 8, 8, 8, 8, 8, 8,
+
+  2, 8, 8, 8,
+  2, 8, 8, 8,
+  2, 8, 8, 8,
+  8, 8, 8, 8, 8, 8, 8, 8,
+
+  2, 8, 8, 8, 8,
+  2, 8, 8, 8,
+  2, 8, 8, 8,
+  2, 8, 8, 8, 8,
+
+  2, 8, 8, 8, 8,
+
+  //repeats
+  8, 8, 8, 8, 8, 8, 8, 8,
+  2, 8, 8, 8,
+  8, 8, 8, 8, 8, 8, 8, 8,
+
+  2, 8, 8, 8,
+  2, 8, 8, 8,
+  2, 8, 8, 8,
+  8, 8, 8, 8, 8, 8, 8, 8,
+
+  2, 8, 8, 8, 8,
+  2, 8, 8, 8,
+  2, 8, 8, 8,
+  2, 8, 8, 8, 8,
+
+  2
+};
+// END THE GODFATHER
+
+// 3 PINK PANTHER
+
+int melody3[] = {
+  REST, REST, REST, NOTE_DS4, 
+  NOTE_E4, REST, NOTE_FS4, NOTE_G4, REST, NOTE_DS4,
+  NOTE_E4, NOTE_FS4,  NOTE_G4, NOTE_C5, NOTE_B4, NOTE_E4, NOTE_G4, NOTE_B4,   
+  NOTE_AS4, NOTE_A4, NOTE_G4, NOTE_E4, NOTE_D4, 
+  NOTE_E4, REST, REST, NOTE_DS4,
+  
+  NOTE_E4, REST, NOTE_FS4, NOTE_G4, REST, NOTE_DS4,
+  NOTE_E4, NOTE_FS4,  NOTE_G4, NOTE_C5, NOTE_B4, NOTE_G4, NOTE_B4, NOTE_E5,
+  NOTE_DS5,   
+  NOTE_D5, REST, REST, NOTE_DS4, 
+  NOTE_E4, REST, NOTE_FS4, NOTE_G4, REST, NOTE_DS4,
+  NOTE_E4, NOTE_FS4,  NOTE_G4, NOTE_C5, NOTE_B4, NOTE_E4, NOTE_G4, NOTE_B4,   
+  
+  NOTE_AS4, NOTE_A4, NOTE_G4, NOTE_E4, NOTE_D4, 
+  NOTE_E4, REST,
+  REST, NOTE_E5, NOTE_D5, NOTE_B4, NOTE_A4, NOTE_G4, NOTE_E4,
+  NOTE_AS4, NOTE_A4, NOTE_AS4, NOTE_A4, NOTE_AS4, NOTE_A4, NOTE_AS4, NOTE_A4,   
+  NOTE_G4, NOTE_E4, NOTE_D4, NOTE_E4, NOTE_E4, NOTE_E4
+};
+
+int durations3[] = {
+  2, 4, 8, 8, 
+  4, 8, 8, 4, 8, 8,
+  8, 8,  8, 8, 8, 8, 8, 8,   
+  2, 16, 16, 16, 16, 
+  2, 4, 8, 4,
+  
+  4, 8, 8, 4, 8, 8,
+  8, 8,  8, 8, 8, 8, 8, 8,
+  1,   
+  2, 4, 8, 8, 
+  4, 8, 8, 4, 8, 8,
+  8, 8,  8, 8, 8, 8, 8, 8,   
+  
+  2, 16, 16, 16, 16, 
+  4, 4,
+  4, 8, 8, 8, 8, 8, 8,
+  16, 8, 16, 8, 16, 8, 16, 8,   
+  16, 16, 16, 16, 16, 2
+};
+
+// END PINK PANTHER
+
+// 4 GAME OF THRONES
+int melody4[] = {
+  NOTE_G4, NOTE_C4, NOTE_DS4, NOTE_F4, NOTE_G4, NOTE_C4, NOTE_DS4, NOTE_F4,
+  NOTE_G4, NOTE_C4, NOTE_DS4, NOTE_F4, NOTE_G4, NOTE_C4, NOTE_DS4, NOTE_F4,
+  NOTE_G4, NOTE_C4, NOTE_E4, NOTE_F4, NOTE_G4, NOTE_C4, NOTE_E4, NOTE_F4,
+  NOTE_G4, NOTE_C4, NOTE_E4, NOTE_F4, NOTE_G4, NOTE_C4, NOTE_E4, NOTE_F4,
+  NOTE_G4, NOTE_C4,
+  
+  NOTE_DS4, NOTE_F4, NOTE_G4, NOTE_C4, NOTE_DS4, NOTE_F4,
+  NOTE_D4,
+  NOTE_F4, NOTE_AS3,
+  NOTE_DS4, NOTE_D4, NOTE_F4, NOTE_AS3,
+  NOTE_DS4, NOTE_D4, NOTE_C4,
+  
+  NOTE_G4, NOTE_C4,
+  
+  NOTE_DS4, NOTE_F4, NOTE_G4, NOTE_C4, NOTE_DS4, NOTE_F4,
+  NOTE_D4,
+  NOTE_F4, NOTE_AS3,
+  NOTE_DS4, NOTE_D4, NOTE_F4, NOTE_AS3,
+  NOTE_DS4, NOTE_D4, NOTE_C4,
+  NOTE_G4, NOTE_C4,
+  NOTE_DS4, NOTE_F4, NOTE_G4,  NOTE_C4, NOTE_DS4, NOTE_F4,
+  
+  NOTE_D4,
+  NOTE_F4, NOTE_AS3,
+  NOTE_D4, NOTE_DS4, NOTE_D4, NOTE_AS3,
+  NOTE_C4,
+  NOTE_C5,
+  NOTE_AS4,
+  NOTE_C4,
+  NOTE_G4,
+  NOTE_DS4,
+  NOTE_DS4, NOTE_F4,
+  NOTE_G4,
+  
+  NOTE_C5,
+  NOTE_AS4,
+  NOTE_C4,
+  NOTE_G4,
+  NOTE_DS4,
+  NOTE_DS4, NOTE_D4,
+  NOTE_C5, NOTE_G4, NOTE_GS4, NOTE_AS4, NOTE_C5, NOTE_G4, NOTE_GS4, NOTE_AS4,
+  NOTE_C5, NOTE_G4, NOTE_GS4, NOTE_AS4, NOTE_C5, NOTE_G4, NOTE_GS4, NOTE_AS4,
+  
+  REST, NOTE_GS5, NOTE_AS5, NOTE_C6, NOTE_G5, NOTE_GS5, NOTE_AS5,
+  NOTE_C6, NOTE_G5, NOTE_GS5, NOTE_AS5, NOTE_C6, NOTE_G5, NOTE_GS5, NOTE_AS5
+};
+
+int durations4[] = {
 	8, 8, 16, 16, 8, 8, 16, 16,
 	8, 8, 16, 16, 8, 8, 16, 16,
 	8, 8, 16, 16, 8, 8, 16, 16,
@@ -194,23 +384,107 @@ int durations[] = {
 	4, 16, 16, 8, 8, 16, 16,
 	8, 16, 16, 16, 8, 8, 16, 16
 };
+// END GAME OF THRONES
+
+// THE SIMPSONS
+int melody5[] = {
+  NOTE_C4, NOTE_E4, NOTE_FS4, REST, NOTE_A4,
+  NOTE_G4, NOTE_E4, NOTE_C4, NOTE_A3,
+  NOTE_FS3, NOTE_FS3, NOTE_FS3, NOTE_G3, REST,
+  NOTE_FS3, NOTE_FS3, NOTE_FS3, NOTE_G3, NOTE_AS3,
+  NOTE_B3, REST
+};
+
+int durations5[] = {
+  2, 4, 4, 32, 8,
+  2, 4, 4, 8,
+  8, 8, 8, 4, 2,
+  8, 8, 8, 4, 2,
+  2, 2
+};
+// END THE SIMPSONS
 
 void setup()
 {
 	pinMode(BUZZER_PIN, OUTPUT);
+    pinMode(BOTTON1_PIN, INPUT_PULLUP);
+    pinMode(BOTTON2_PIN, INPUT_PULLUP);
+  	pinMode(BOTTON3_PIN, INPUT_PULLUP);
 	pinMode(BOTTON4_PIN, INPUT_PULLUP);
+  	pinMode(BOTTON5_PIN, INPUT_PULLUP);
 }
 
 void loop() {
-	if (digitalRead(BOTTON4_PIN) == LOW) {
 
-		int size = sizeof(durations) / sizeof(int);
+  	if (digitalRead(BOTTON1_PIN) == LOW) {
+
+		int size = sizeof(durations1) / sizeof(int);
 
 		for (int note = 0; note < size; note++) {
 			//to calculate the note duration, take one second divided by the note type.
 			//e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
-			int duration = 1000 / durations[note];
-			tone(BUZZER_PIN, melody[note], duration);
+			int duration = T / durations1[note];
+			tone(BUZZER_PIN, melody1[note], duration);
+
+			//to distinguish the notes, set a minimum time between them.
+			//the note's duration + 30% seems to work well:
+			int pauseBetweenNotes = duration * 1.30;
+			delay(pauseBetweenNotes);
+
+			//stop the tone playing:
+			noTone(BUZZER_PIN);
+		}
+	} 
+  
+  	if (digitalRead(BOTTON2_PIN) == LOW) {
+
+		int size = sizeof(durations2) / sizeof(int);
+
+		for (int note = 0; note < size; note++) {
+			//to calculate the note duration, take one second divided by the note type.
+			//e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
+			int duration = T / durations2[note];
+			tone(BUZZER_PIN, melody2[note], duration);
+
+			//to distinguish the notes, set a minimum time between them.
+			//the note's duration + 30% seems to work well:
+			int pauseBetweenNotes = duration * 1.30;
+			delay(pauseBetweenNotes);
+
+			//stop the tone playing:
+			noTone(BUZZER_PIN);
+		}
+	} 
+  
+	if (digitalRead(BOTTON3_PIN) == LOW) {
+
+		int size = sizeof(durations3) / sizeof(int);
+
+		for (int note = 0; note < size; note++) {
+			//to calculate the note duration, take one second divided by the note type.
+			//e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
+			int duration = T / durations3[note];
+			tone(BUZZER_PIN, melody3[note], duration);
+
+			//to distinguish the notes, set a minimum time between them.
+			//the note's duration + 30% seems to work well:
+			int pauseBetweenNotes = duration * 1.30;
+			delay(pauseBetweenNotes);
+
+			//stop the tone playing:
+			noTone(BUZZER_PIN);
+		}
+	}  
+  
+  	if (digitalRead(BOTTON4_PIN) == LOW) {
+
+		int size = sizeof(durations4) / sizeof(int);
+
+		for (int note = 0; note < size; note++) {
+			//to calculate the note duration, take one second divided by the note type.
+			//e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
+			int duration = T / durations4[note];
+			tone(BUZZER_PIN, melody4[note], duration);
 
 			//to distinguish the notes, set a minimum time between them.
 			//the note's duration + 30% seems to work well:
@@ -221,4 +495,25 @@ void loop() {
 			noTone(BUZZER_PIN);
 		}
 	}
+  
+  	if (digitalRead(BOTTON5_PIN) == LOW) {
+
+		int size = sizeof(durations5) / sizeof(int);
+
+		for (int note = 0; note < size; note++) {
+			//to calculate the note duration, take one second divided by the note type.
+			//e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
+			int duration = T / durations5[note];
+			tone(BUZZER_PIN, melody5[note], duration);
+
+			//to distinguish the notes, set a minimum time between them.
+			//the note's duration + 30% seems to work well:
+			int pauseBetweenNotes = duration * 1.30;
+			delay(pauseBetweenNotes);
+
+			//stop the tone playing:
+			noTone(BUZZER_PIN);
+		}
+	}
+  
 }
