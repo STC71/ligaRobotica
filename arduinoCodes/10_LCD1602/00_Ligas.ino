@@ -92,17 +92,17 @@ void setup() {
   lcd.createChar(0,bot);
   
     // create a new character
-  lcd.createChar(0,S1);
+  lcd.createChar(1,S1);
   // create a new character
-  lcd.createChar(1,S2);
+  lcd.createChar(2,S2);
   // create a new character
-  lcd.createChar(2,S3);
+  lcd.createChar(3,S3);
     // create a new character
-  lcd.createChar(3,S4);
+  lcd.createChar(4,S4);
   // create a new character
-  lcd.createChar(4,S5);
+  lcd.createChar(5,S5);
   // create a new character
-  lcd.createChar(5,S6);
+  lcd.createChar(6,S6);
   
 }
 
@@ -157,26 +157,26 @@ void printAnimation () {// animación
 // set the cursor to the top left
   for (int i = 0; i <= 16; i = i + 4) {
   	lcd.setCursor(i, 0);
-  	lcd.write(byte(0)); 
-  	lcd.write((byte)1); 
+  	lcd.write(byte(1)); 
   	lcd.write((byte)2); 
-  	lcd.setCursor(i, 1);
   	lcd.write((byte)3); 
+  	lcd.setCursor(i, 1);
   	lcd.write((byte)4); 
-  	lcd.write((byte)5);
+  	lcd.write((byte)5); 
+  	lcd.write((byte)6);
     delay(500);
     lcd.clear();
   }
   // set the cursor to the top right
   for (int i = 16; i >= 0; i = i - 4) {
   	lcd.setCursor(i, 0);
-  	lcd.write(byte(0)); 
-  	lcd.write((byte)1); 
+  	lcd.write(byte(1)); 
   	lcd.write((byte)2); 
-  	lcd.setCursor(i, 1);
   	lcd.write((byte)3); 
+  	lcd.setCursor(i, 1);
   	lcd.write((byte)4); 
-  	lcd.write((byte)5);
+  	lcd.write((byte)5); 
+  	lcd.write((byte)6);
     delay(500);
     lcd.clear();
   }
