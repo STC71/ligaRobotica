@@ -6,7 +6,7 @@ LiquidCrystal lcd(4, 5, 6, 7, 8, 9);
 String hel = "  HELLO WORLD!";
 String f42 = " FROM 42 MALAGA";
 String wlc = "WE LOVE CODE :)";
-String up2 = "AP TO YOU :|";
+String up2 = "UP TO YOU :|";
 String don = "DON´T PANIC :(";
 String w42 = "WELLCOME 42";
 
